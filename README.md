@@ -39,7 +39,7 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 Celeste A. Moore  
 
 ## Contact
-If you have any questions about this repository, contact with @celesteamoore via GitHub or celestealexmoore@gmail.com via email.  
+If you have any questions about this repository, contact @celesteamoore via GitHub or celestealexmoore@gmail.com via email.  
 
 ## Project Status
 In Progress

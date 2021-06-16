@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Tech Blog</title>
+    <link rel="stylesheet" href="css/{{style}}">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>{{title}}</title>
 </head>
-
 <body>
-    <section id="header">
 
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="n/a">Dashboard</a></li>
-            <li><a href="n/a">Logout</a></li>
-        </ul>
+<nav>
+    <ul class="menu">
+        <li class="logo">The Tech Blog</li>
+        <li class="item"><a href="/homepage">Home</a></li>
+        <li class="item"><a href="/dashboard">Dashboard</a></li>
+        <li class="item button"><a href="/" id="logout">Logout</a></li>
+        {{else}}
+        <li class="item button"><a href="/login">Login</a></li>
+        {{/if}}
+        <li class="toggle"><span class="bars"></span></li>
+    </ul>
+</nav>
 
-        <div id="websiteName">The Tech Blog</div>
-    </section>
-
-    <section id="blogDiv">
-        <h3>This is where the blog stuff is going.</h3>
-    </section>
-
+<main>
+    <body>
+        <!-- Render the sub layout -->
+        {{{ body }}}
+    </body>
+</main>
 
 </body>
+<script src="./js/script.js"></script>
+{{#if logged_in}}
+<script src="./js/logout.js"></script>
+{{/if}}
 </html>
